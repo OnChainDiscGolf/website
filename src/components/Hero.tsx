@@ -24,9 +24,9 @@ export default function Hero() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button className="px-8 py-4 bg-brand-green hover:bg-green-500 text-brand-dark font-bold rounded-full transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+                        <a href="https://app.onchaindiscgolf.com" className="px-8 py-4 bg-brand-green hover:bg-green-500 text-brand-dark font-bold rounded-full transition-all transform hover:scale-105 flex items-center justify-center gap-2">
                             Launch App <ArrowRight className="w-5 h-5" />
-                        </button>
+                        </a>
                         <button className="px-8 py-4 border border-brand-blue text-brand-blue hover:bg-brand-blue/10 font-bold rounded-full transition-all flex items-center justify-center gap-2">
                             Learn More <Download className="w-5 h-5" />
                         </button>
