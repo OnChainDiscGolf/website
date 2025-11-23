@@ -14,7 +14,7 @@ const resources = [
         icon: <Zap className="w-10 h-10 text-[#7B1AF7]" />,
         title: "Lightning Network",
         description: "A layer-2 protocol for instant, low-cost global payments built on top of Bitcoin.",
-        link: "https://lightning.network",
+        link: "https://strike.me/en/learn/what-is-the-lightning-network/",
     },
     {
         icon: <Lock className="w-10 h-10 text-[#2ecc71]" />,
