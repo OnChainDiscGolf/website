@@ -16,11 +16,12 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     <h1 className="text-5xl md:text-7xl font-heading font-bold mb-6">
-                        The Future of Disc Golf is <span className="text-gradient">On-Chain</span>
+                        Play Disc Golf. <span className="text-gradient">Win Bitcoin.</span>
                     </h1>
                     <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-                        Compete, Earn, and Connect with the next generation of Disc Golf.
-                        Experience instant payouts and seamless play without the hassle.
+                        The first disc golf app where you compete with friends, track scores,
+                        and get paid instantly when you win—all through your phone. No accounts
+                        to create, no waiting for payouts, no hassle.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

@@ -6,18 +6,18 @@ import { Zap, Shield, Globe } from "lucide-react";
 const features = [
     {
         icon: <Zap className="w-12 h-12 text-brand-accent" />,
-        title: "Instant Payouts",
-        description: "Get paid immediately after your round. No waiting for bank transfers.",
+        title: "Win = Get Paid. Instantly.",
+        description: "Lowest score wins. Money hits your phone the second the round ends. No IOUs, no 'I'll pay you next time', no payment app delays. Just play and get paid.",
     },
     {
         icon: <Globe className="w-12 h-12 text-brand-secondary" />,
-        title: "One Account, Anywhere",
-        description: "Your reputation travels with you. Sign in once, play anywhere, no email needed.",
+        title: "Play Without the Paperwork",
+        description: "No email. No password. No personal info. Your phone is your identity. Play at any course with any players—your reputation and balance travel with you automatically.",
     },
     {
         icon: <Shield className="w-12 h-12 text-brand-primary" />,
-        title: "Private & Instant",
-        description: "Powered by digital cash. Transactions are private, instant, and final.",
+        title: "Your Money, Your Control",
+        description: "Your balance can't be frozen, your account can't be closed, and nobody needs to approve your transactions. Like cash in your pocket, but digital and instant.",
     },
 ];
 
