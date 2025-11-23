@@ -33,13 +33,13 @@ export default function InstallGuide() {
                         </div>
                         <ol className="space-y-4 text-gray-300">
                             <li className="flex items-start gap-3">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-blue/20 text-brand-blue flex items-center justify-center text-sm font-bold">1</span>
+                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-secondary/20 text-brand-secondary flex items-center justify-center text-sm font-bold">1</span>
                                 <span>
                                     Tap the <Share className="w-4 h-4 inline mx-1" /> <strong>Share</strong> button in Safari.
                                 </span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-blue/20 text-brand-blue flex items-center justify-center text-sm font-bold">2</span>
+                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-secondary/20 text-brand-secondary flex items-center justify-center text-sm font-bold">2</span>
                                 <span>
                                     Scroll down and tap <PlusSquare className="w-4 h-4 inline mx-1" /> <strong>Add to Home Screen</strong>.
                                 </span>
@@ -68,19 +68,19 @@ export default function InstallGuide() {
                         </div>
                         <ol className="space-y-4 text-gray-300">
                             <li className="flex items-start gap-3">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center text-sm font-bold">1</span>
+                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-primary/20 text-brand-primary flex items-center justify-center text-sm font-bold">1</span>
                                 <span>
                                     Tap the <MoreVertical className="w-4 h-4 inline mx-1" /> <strong>Menu</strong> (three dots) in Chrome.
                                 </span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center text-sm font-bold">2</span>
+                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-primary/20 text-brand-primary flex items-center justify-center text-sm font-bold">2</span>
                                 <span>
                                     Tap <Download className="w-4 h-4 inline mx-1" /> <strong>Install App</strong> or <strong>Add to Home screen</strong>.
                                 </span>
                             </li>
                             <li className="flex items-start gap-3">
-                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-green/20 text-brand-green flex items-center justify-center text-sm font-bold">3</span>
+                                <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-primary/20 text-brand-primary flex items-center justify-center text-sm font-bold">3</span>
                                 <span>
                                     Follow the on-screen prompts to install.
                                 </span>

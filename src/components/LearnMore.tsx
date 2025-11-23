@@ -17,7 +17,7 @@ const resources = [
         link: "https://strike.me/en/learn/what-is-the-lightning-network/",
     },
     {
-        icon: <Lock className="w-10 h-10 text-[#2ecc71]" />,
+        icon: <Lock className="w-10 h-10 text-brand-primary" />,
         title: "Cashu",
         description: "A free and open-source Chaumian Ecash protocol for privacy and scalability.",
         link: "https://cashu.space",
@@ -32,7 +32,7 @@ const resources = [
 
 export default function LearnMore() {
     return (
-        <section className="py-24 bg-brand-dark relative">
+        <section id="learn-more" className="py-24 bg-brand-dark relative">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
@@ -55,7 +55,7 @@ export default function LearnMore() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-green/50 hover:bg-white/10 transition-all flex flex-col items-center text-center"
+                            className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-primary/50 hover:bg-white/10 transition-all flex flex-col items-center text-center"
                         >
                             <div className="mb-4 p-3 rounded-full bg-white/5 group-hover:scale-110 transition-transform">
                                 {resource.icon}

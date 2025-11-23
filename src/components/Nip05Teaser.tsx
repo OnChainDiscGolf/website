@@ -6,7 +6,7 @@ import { AtSign } from "lucide-react";
 export default function Nip05Teaser() {
     return (
         <section className="py-24 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-brand-dark to-brand-blue/10 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-b from-brand-dark to-brand-secondary/10 pointer-events-none" />
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="max-w-4xl mx-auto text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/10">
@@ -15,7 +15,7 @@ export default function Nip05Teaser() {
                         whileInView={{ scale: 1, opacity: 1 }}
                         viewport={{ once: true }}
                     >
-                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-blue/20 text-brand-blue mb-6">
+                        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-brand-secondary/20 text-brand-secondary mb-6">
                             <AtSign className="w-8 h-8" />
                         </div>
                         <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
@@ -26,14 +26,14 @@ export default function Nip05Teaser() {
                             Get your verified NIP-05 identifier soon.
                         </p>
 
-                        <div className="bg-black/30 p-4 rounded-xl inline-block mb-8 border border-brand-gold/30">
-                            <span className="text-2xl md:text-4xl font-mono text-brand-gold">
+                        <div className="bg-black/30 p-4 rounded-xl inline-block mb-8 border border-brand-accent/30">
+                            <span className="text-2xl md:text-4xl font-mono text-brand-accent">
                                 yourname<span className="text-gray-500">@onchaindiscgolf.com</span>
                             </span>
                         </div>
 
                         <div>
-                            <span className="inline-block px-4 py-2 rounded-full bg-brand-gold/20 text-brand-gold text-sm font-bold tracking-wide uppercase">
+                            <span className="inline-block px-4 py-2 rounded-full bg-brand-accent/20 text-brand-accent text-sm font-bold tracking-wide uppercase">
                                 Coming Soon
                             </span>
                         </div>

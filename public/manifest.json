@@ -1,0 +1,24 @@
+{
+    "name": "OnChainDiscGolf",
+    "short_name": "OnChainDG",
+    "description": "Compete, Earn, and Connect with the first Nostr-powered Disc Golf wallet.",
+    "start_url": "https://app.onchaindiscgolf.com",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#2ecc71",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

@@ -5,17 +5,17 @@ import { Zap, Shield, Globe } from "lucide-react";
 
 const features = [
     {
-        icon: <Zap className="w-12 h-12 text-brand-gold" />,
+        icon: <Zap className="w-12 h-12 text-brand-accent" />,
         title: "Instant Payouts",
         description: "Get paid immediately after your round. No waiting for bank transfers.",
     },
     {
-        icon: <Globe className="w-12 h-12 text-brand-blue" />,
+        icon: <Globe className="w-12 h-12 text-brand-secondary" />,
         title: "One Account, Anywhere",
         description: "Your reputation travels with you. Sign in once, play anywhere, no email needed.",
     },
     {
-        icon: <Shield className="w-12 h-12 text-brand-green" />,
+        icon: <Shield className="w-12 h-12 text-brand-primary" />,
         title: "Private & Instant",
         description: "Powered by digital cash. Transactions are private, instant, and final.",
     },
@@ -33,7 +33,7 @@ export default function Features() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.2 }}
                             viewport={{ once: true }}
-                            className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-green/50 transition-colors"
+                            className="p-8 rounded-2xl bg-brand-surface/50 border border-white/10 hover:border-brand-primary/50 transition-colors"
                         >
                             <div className="mb-6">{feature.icon}</div>
                             <h3 className="text-2xl font-heading font-bold mb-4">{feature.title}</h3>
