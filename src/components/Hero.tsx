@@ -23,13 +23,28 @@ export default function Hero() {
                         Experience instant payouts and true ownership.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                         <a href="https://app.onchaindiscgolf.com" className="px-8 py-4 bg-brand-green hover:bg-green-500 text-brand-dark font-bold rounded-full transition-all transform hover:scale-105 flex items-center justify-center gap-2">
                             Launch App <ArrowRight className="w-5 h-5" />
                         </a>
                         <button className="px-8 py-4 border border-brand-blue text-brand-blue hover:bg-brand-blue/10 font-bold rounded-full transition-all flex items-center justify-center gap-2">
                             Learn More <Download className="w-5 h-5" />
                         </button>
+                    </div>
+
+                    {/* QR Code for Desktop */}
+                    <div className="hidden md:flex flex-col items-center animate-fade-in">
+                        <div className="bg-white p-2 rounded-xl shadow-lg shadow-brand-green/20 mb-3">
+                            <img
+                                src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://app.onchaindiscgolf.com&bgcolor=ffffff"
+                                alt="Scan to Play"
+                                className="w-32 h-32"
+                            />
+                        </div>
+                        <p className="text-sm text-gray-400 font-mono flex items-center gap-2">
+                            <span className="w-2 h-2 rounded-full bg-brand-green animate-pulse" />
+                            Scan to Play on Mobile
+                        </p>
                     </div>
                 </motion.div>
             </div>
