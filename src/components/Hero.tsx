@@ -53,16 +53,18 @@ export default function Hero() {
 
                     {/* QR Code for Desktop */}
                     <div className="hidden md:flex flex-col items-center animate-fade-in">
-                        <div className="bg-white p-2 rounded-xl shadow-lg shadow-brand-primary/20 mb-3">
-                            <img
-                                src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://app.onchaindiscgolf.com&bgcolor=ffffff"
-                                alt="Scan to Play"
-                                className="w-32 h-32"
-                            />
+                        <div className="p-1 rounded-xl bg-gradient-to-r from-brand-primary to-brand-secondary shadow-lg shadow-brand-primary/20 mb-3">
+                            <div className="bg-white p-2 rounded-lg">
+                                <img
+                                    src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://app.onchaindiscgolf.com&bgcolor=ffffff"
+                                    alt="Scan to Play"
+                                    className="w-32 h-32"
+                                />
+                            </div>
                         </div>
-                        <p className="text-sm text-gray-400 font-mono flex items-center gap-2">
+                        <p className="text-sm text-gray-300 font-medium flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-brand-primary animate-pulse" />
-                            Scan to Play on Mobile
+                            Scan with mobile to install on phone
                         </p>
                     </div>
                 </motion.div>
