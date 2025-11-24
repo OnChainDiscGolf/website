@@ -1,8 +1,10 @@
+import { Github, Twitter, Instagram } from 'lucide-react';
+
 export default function Footer() {
-    // TODO: Update these URLs with actual social media links
     const socialLinks = {
-        github: 'https://github.com/GarrettGlass/onchaindiscgolf-landing', // Update with org link
-        twitter: 'https://twitter.com/onchaindiscgolf', // TODO: Replace with actual handle
+        github: 'https://github.com/GarrettGlass/onchaindiscgolf-landing',
+        twitter: 'https://x.com/OnChainDiscGolf',
+        instagram: 'https://www.instagram.com/onchaindiscgolf/',
         nostr: 'https://nostr.com', // TODO: Replace with actual Nostr profile
     };
 
@@ -25,33 +27,33 @@ export default function Footer() {
                             Launch App →
                         </a>
 
-                        <div className="flex gap-6">
+                        <div className="flex gap-4">
                             <a
                                 href={socialLinks.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-brand-primary transition-colors"
+                                className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-lg"
                                 aria-label="GitHub repository"
                             >
-                                GitHub
+                                <Github className="w-5 h-5" />
                             </a>
                             <a
                                 href={socialLinks.twitter}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-brand-secondary transition-colors"
-                                aria-label="Twitter profile"
+                                className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-lg"
+                                aria-label="Twitter/X profile"
                             >
-                                Twitter
+                                <Twitter className="w-5 h-5" />
                             </a>
                             <a
-                                href={socialLinks.nostr}
+                                href={socialLinks.instagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-brand-accent transition-colors"
-                                aria-label="Nostr profile"
+                                className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-lg"
+                                aria-label="Instagram profile"
                             >
-                                Nostr
+                                <Instagram className="w-5 h-5" />
                             </a>
                         </div>
                     </div>
