@@ -1,9 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 
 export default function Hero() {
+    const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+
     return (
         <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
             {/* Background Elements */}
@@ -16,8 +19,32 @@ export default function Hero() {
                     transition={{ duration: 0.8 }}
                 >
                     {/* Brand Name - Largest Element */}
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold mb-4 md:mb-6 tracking-tight">
-                        <span className="text-gradient">On-Chain</span> Disc Golf
+                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold mb-4 md:mb-6 tracking-tight relative z-20">
+                        <span className="text-gradient">On-Chain</span>
+                        <span
+                            className="text-gradient cursor-help ml-1 relative"
+                            onMouseEnter={() => setIsTooltipVisible(true)}
+                            onMouseLeave={() => setIsTooltipVisible(false)}
+                        >
+                            *
+                            <AnimatePresence>
+                                {isTooltipVisible && (
+                                    <motion.div
+                                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                        transition={{ duration: 0.2 }}
+                                        className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-64 p-4 bg-brand-surface border border-brand-primary/20 rounded-xl shadow-2xl z-50 pointer-events-none"
+                                    >
+                                        <p className="text-base font-medium text-gray-200 leading-relaxed font-sans normal-case tracking-normal">
+                                            It&apos;s not actually on the Bitcoin chain. We use Lightning and Cashu ;)
+                                        </p>
+                                        {/* Arrow pointing up */}
+                                        <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 bg-brand-surface border-t border-l border-brand-primary/20 transform rotate-45" />
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+                        </span> Disc Golf
                     </h1>
 
                     {/* Slogan */}
