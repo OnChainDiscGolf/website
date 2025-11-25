@@ -82,7 +82,7 @@ export default function Hero() {
 
                     {/* QR Code for Desktop */}
                     <div className="hidden md:flex flex-col items-center animate-fade-in">
-                        <div className="p-1 rounded-xl bg-gradient-to-r from-brand-primary to-brand-secondary shadow-lg shadow-brand-primary/20 mb-3">
+                        <div className="p-2 rounded-xl bg-gradient-to-r from-brand-primary to-brand-secondary shadow-lg shadow-brand-primary/20 mb-3">
                             <div className="bg-white p-2 rounded-lg">
                                 <img
                                     src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://app.onchaindiscgolf.com&bgcolor=ffffff"
