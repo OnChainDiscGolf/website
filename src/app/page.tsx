@@ -1,22 +1,22 @@
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Features from "@/components/Features";
+import AppShowcase from "@/components/AppShowcase";
 import HowItWorks from "@/components/HowItWorks";
-import WhyOnChain from "@/components/WhyOnChain";
-import InstallGuide from "@/components/InstallGuide";
-import Nip05Teaser from "@/components/Nip05Teaser";
-import LearnMore from "@/components/LearnMore";
+import WhySwitch from "@/components/WhySwitch";
+import FAQ from "@/components/FAQ";
+import Download from "@/components/Download";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
+      <Navbar />
       <Hero />
-      <Features />
+      <AppShowcase />
       <HowItWorks />
-      <WhyOnChain />
-      <InstallGuide />
-      <Nip05Teaser />
-      <LearnMore />
+      <WhySwitch />
+      <FAQ />
+      <Download />
       <Footer />
     </main>
   );

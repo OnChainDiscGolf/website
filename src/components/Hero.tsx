@@ -1,103 +1,138 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, Download } from "lucide-react";
+import { motion } from "framer-motion";
+import { Download, Globe } from "lucide-react";
+import PhoneMockup from "./PhoneMockup";
+
+const APK_URL =
+  "https://github.com/OnChainDiscGolf/app/releases/latest/download/on-chain-disc-golf-v1.1.0.apk";
+const PWA_URL = "https://app.onchaindiscgolf.com";
 
 export default function Hero() {
-    const [isTooltipVisible, setIsTooltipVisible] = useState(false);
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 pb-12">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-primary/8 via-brand-dark to-brand-dark z-0" />
 
-    return (
-        <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-            {/* Background Elements */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-brand-primary/10 via-brand-dark to-brand-dark z-0" />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 z-10 w-full">
+        <div className="flex flex-col md:flex-row items-center gap-10 md:gap-16">
+          {/* Text content */}
+          <div className="flex-1 text-center md:text-left">
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-primary/10 border border-brand-primary/20 mb-6"
+            >
+              <span className="w-2 h-2 rounded-full bg-brand-primary animate-pulse" />
+              <span className="text-brand-primary text-xs font-medium">
+                Now available for Android
+              </span>
+            </motion.div>
 
-            <div className="container mx-auto px-4 z-10 text-center">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
+            {/* Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold tracking-tight mb-5 leading-[1.1]"
+            >
+              Keep Score.
+              <br />
+              Place Bets.
+              <br />
+              <span className="text-gradient">Settle Up.</span>
+            </motion.h1>
+
+            {/* Subheadline */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="text-lg sm:text-xl text-white/60 mb-3 max-w-lg mx-auto md:mx-0 leading-relaxed"
+            >
+              The disc golf scorecard that handles the money. Track your rounds,
+              collect entry fees, and pay out winners automatically.
+            </motion.p>
+
+            {/* Tagline */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              className="text-brand-accent italic text-sm mb-8"
+            >
+              &ldquo;We&apos;ll settle up after the round!&rdquo;
+            </motion.p>
+
+            {/* CTAs */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.35 }}
+              className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start mb-4"
+            >
+              <a
+                href={APK_URL}
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-brand-primary hover:bg-brand-primary/90 text-white font-semibold rounded-full transition-all hover:scale-105 text-sm"
+                aria-label="Download On-Chain Disc Golf APK for Android"
+              >
+                <Download size={18} />
+                Download for Android
+              </a>
+              <a
+                href={PWA_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 border border-brand-secondary/40 hover:border-brand-secondary/60 text-brand-secondary hover:text-white font-semibold rounded-full transition-all text-sm"
+                aria-label="Open On-Chain Disc Golf web app"
+              >
+                <Globe size={18} />
+                Try the Web App
+              </a>
+            </motion.div>
+
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.4 }}
+              className="text-white/30 text-xs"
+            >
+              Also available as a Progressive Web App for iOS
+            </motion.p>
+          </div>
+
+          {/* Phone mockup */}
+          <motion.div
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="flex-shrink-0 hidden sm:block"
+          >
+            <PhoneMockup
+              src="/screenshots/scorecard.png"
+              alt="On-Chain Disc Golf scorecard"
+              placeholder="Scorecard"
+              placeholderIcon={
+                <svg
+                  width="64"
+                  height="64"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
-                    {/* Brand Name - Largest Element */}
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-heading font-bold mb-4 md:mb-6 tracking-tight relative z-20">
-                        <span className="text-gradient">On-Chain</span>
-                        <span
-                            className="text-gradient cursor-help ml-1 relative align-top text-3xl md:text-5xl"
-                            onMouseEnter={() => setIsTooltipVisible(true)}
-                            onMouseLeave={() => setIsTooltipVisible(false)}
-                            onClick={() => setIsTooltipVisible(!isTooltipVisible)}
-                        >
-                            *
-                        </span> Disc Golf
-
-                        <AnimatePresence>
-                            {isTooltipVisible && (
-                                <motion.div
-                                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                    transition={{ duration: 0.2 }}
-                                    className="absolute left-1/2 -translate-x-1/2 top-full mt-2 w-[90vw] max-w-sm p-4 bg-brand-surface border border-brand-primary/20 rounded-xl shadow-2xl z-50 pointer-events-none"
-                                >
-                                    <p className="text-base font-medium text-gray-200 leading-relaxed font-sans normal-case tracking-normal">
-                                        It&apos;s not actually on the Bitcoin chain. We use Lightning via Breez ;)
-                                    </p>
-                                    {/* Arrow pointing up */}
-                                    <div className="absolute left-1/2 -translate-x-1/2 -top-2 w-4 h-4 bg-brand-surface border-t border-l border-brand-primary/20 transform rotate-45" />
-                                </motion.div>
-                            )}
-                        </AnimatePresence>
-                    </h1>
-
-                    {/* Slogan */}
-                    <p className="text-2xl md:text-4xl font-heading font-semibold mb-6 md:mb-8 text-gray-200">
-                        The Future of Disc Golf is <span className="text-gradient">On-Chain</span>
-                    </p>
-
-                    {/* Value Proposition */}
-                    <p className="text-lg md:text-xl text-gray-300 mb-8 md:mb-10 max-w-3xl mx-auto">
-                        Compete with friends, track scores, and settle up instantly—all through your phone.
-                        Automatic round settlement with Bitcoin. No accounts, no waiting, no hassle.
-                    </p>
-
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 md:mb-12">
-                        <a
-                            href="https://app.onchaindiscgolf.com"
-                            className="px-8 py-4 bg-brand-primary hover:bg-emerald-600 text-brand-dark font-bold rounded-full transition-all transform hover:scale-105 flex items-center justify-center gap-2"
-                            aria-label="Launch On-Chain Disc Golf App"
-                        >
-                            Launch App <ArrowRight className="w-5 h-5" />
-                        </a>
-                        <button
-                            onClick={() => {
-                                const learnMore = document.getElementById('learn-more');
-                                learnMore?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                            }}
-                            className="px-8 py-4 border border-brand-secondary text-brand-secondary hover:bg-brand-secondary/10 font-bold rounded-full transition-all flex items-center justify-center gap-2"
-                            aria-label="Learn more about On-Chain Disc Golf"
-                        >
-                            Learn More <Download className="w-5 h-5" />
-                        </button>
-                    </div>
-
-                    {/* QR Code for Desktop */}
-                    <div className="hidden md:flex flex-col items-center animate-fade-in">
-                        <div className="p-2 rounded-xl bg-gradient-to-r from-brand-primary to-brand-secondary shadow-lg shadow-brand-primary/20 mb-3">
-                            <div className="bg-white p-2 rounded-lg">
-                                <img
-                                    src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://app.onchaindiscgolf.com&bgcolor=ffffff"
-                                    alt="Scan to Play"
-                                    className="w-32 h-32"
-                                />
-                            </div>
-                        </div>
-                        <p className="text-sm text-gray-300 font-medium flex items-center gap-2">
-                            <span className="w-2 h-2 rounded-full bg-brand-primary animate-pulse" />
-                            Scan with mobile to install on phone
-                        </p>
-                    </div>
-                </motion.div>
-            </div>
-        </section>
-    );
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+              }
+            />
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 }

@@ -1,77 +1,88 @@
-import { Github, Twitter, Instagram, HelpCircle } from 'lucide-react';
+"use client";
+
+import { Github, Twitter, Instagram } from "lucide-react";
+
+const socialLinks = [
+  {
+    label: "GitHub",
+    href: "https://github.com/OnChainDiscGolf",
+    icon: <Github size={18} />,
+  },
+  {
+    label: "Twitter / X",
+    href: "https://x.com/OnChainDiscGolf",
+    icon: <Twitter size={18} />,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/onchaindiscgolf/",
+    icon: <Instagram size={18} />,
+  },
+];
 
 export default function Footer() {
-    const socialLinks = {
-        github: 'https://github.com/OnChainDiscGolf',
-        twitter: 'https://x.com/OnChainDiscGolf',
-        instagram: 'https://www.instagram.com/onchaindiscgolf/',
-    };
+  return (
+    <footer className="border-t border-white/5 bg-black/20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          {/* Brand */}
+          <div className="text-center md:text-left">
+            <h4 className="font-heading font-semibold text-white mb-1">
+              On-Chain Disc Golf
+            </h4>
+            <p className="text-white/30 text-sm italic">
+              &ldquo;We&apos;ll settle up after the round!&rdquo;
+            </p>
+          </div>
 
-    return (
-        <footer className="py-12 border-t border-white/10 bg-black/20">
-            <div className="container mx-auto px-4">
-                {/* Beta Notice */}
-                <div className="text-center mb-8 pb-6 border-b border-white/5">
-                    <p className="text-xs text-gray-500">
-                        ⚠️ This app is experimental. Don&apos;t store more sats than you&apos;re willing to lose.{' '}
-                        <a href="https://help.onchaindiscgolf.com" className="text-brand-primary hover:underline">Learn more</a>
-                    </p>
-                </div>
+          {/* Links */}
+          <div className="flex items-center gap-6 text-sm">
+            <a
+              href="https://app.onchaindiscgolf.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/50 hover:text-white transition-colors"
+            >
+              Web App
+            </a>
+            <a
+              href="https://help.onchaindiscgolf.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white/50 hover:text-white transition-colors"
+            >
+              Help Center
+            </a>
+          </div>
 
-                <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <div className="text-center md:text-left">
-                        <h4 className="text-xl font-heading font-bold text-white mb-1">On-Chain Disc Golf</h4>
-                        <p className="text-gray-500 text-sm">© 2025 All rights reserved.</p>
-                    </div>
+          {/* Socials */}
+          <div className="flex gap-2">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white/40 hover:text-white transition-colors p-2 hover:bg-white/5 rounded-lg"
+                aria-label={link.label}
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
+        </div>
 
-                    <div className="flex flex-col sm:flex-row items-center gap-6">
-                        <div className="flex items-center gap-4">
-                            <a
-                                href="https://app.onchaindiscgolf.com"
-                                className="text-brand-primary hover:text-emerald-400 transition-colors font-medium"
-                            >
-                                Launch App →
-                            </a>
-                            <a
-                                href="https://help.onchaindiscgolf.com"
-                                className="text-gray-400 hover:text-white transition-colors font-medium"
-                            >
-                                Help
-                            </a>
-                        </div>
-
-                        <div className="flex gap-4">
-                            <a
-                                href={socialLinks.github}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-lg"
-                                aria-label="GitHub repository"
-                            >
-                                <Github className="w-5 h-5" />
-                            </a>
-                            <a
-                                href={socialLinks.twitter}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-lg"
-                                aria-label="Twitter/X profile"
-                            >
-                                <Twitter className="w-5 h-5" />
-                            </a>
-                            <a
-                                href={socialLinks.instagram}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-gray-400 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-lg"
-                                aria-label="Instagram profile"
-                            >
-                                <Instagram className="w-5 h-5" />
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    );
+        {/* Beta disclaimer + copyright */}
+        <div className="mt-8 pt-6 border-t border-white/5 text-center">
+          <p className="text-white/20 text-xs mb-2">
+            This app is experimental. Don&apos;t risk more than you can afford
+            to lose.
+          </p>
+          <p className="text-white/20 text-xs">
+            &copy; 2026 On-Chain Disc Golf. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
 }

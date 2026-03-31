@@ -14,9 +14,9 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://onchaindiscgolf.com'),
-  title: "On-Chain Disc Golf - The Future of Disc Golf",
-  description: "Compete, Earn, and Connect with the first Nostr-powered Disc Golf wallet. Experience instant payouts and seamless play with Bitcoin Lightning.",
-  keywords: ["disc golf", "bitcoin", "lightning network", "nostr", "cashu", "crypto", "disc golf wallet", "instant payouts", "web3 sports"],
+  title: "On-Chain Disc Golf — Disc Golf Scorekeeping with Automatic Payouts",
+  description: "Keep score, place bets, and settle up automatically. The disc golf scorecard app with built-in entry fees and instant payouts. Download for Android or try the web app.",
+  keywords: ["disc golf", "disc golf scorecard", "disc golf app", "disc golf scoring", "disc golf payouts", "disc golf betting", "disc golf tournaments", "instant payouts", "bitcoin lightning"],
   authors: [{ name: "On-Chain Disc Golf" }],
   creator: "On-Chain Disc Golf",
   publisher: "On-Chain Disc Golf",
@@ -35,24 +35,24 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://onchaindiscgolf.com',
-    title: 'OnChainDiscGolf - The Future of Disc Golf',
-    description: 'Compete, Earn, and Connect with the first Nostr-powered Disc Golf wallet. Experience instant payouts and seamless play.',
-    siteName: 'OnChainDiscGolf',
+    title: 'On-Chain Disc Golf — Disc Golf Scorekeeping with Automatic Payouts',
+    description: 'Keep score, place bets, and settle up automatically. The disc golf scorecard app that handles the money.',
+    siteName: 'On-Chain Disc Golf',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'On-Chain Disc Golf - The Future of Disc Golf',
+        alt: 'On-Chain Disc Golf — Keep Score. Place Bets. Settle Up.',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'On-Chain Disc Golf - The Future of Disc Golf',
-    description: 'Compete with friends, track scores, and win Bitcoin instantly. The future of disc golf is on-chain.',
+    title: 'On-Chain Disc Golf — Keep Score. Place Bets. Settle Up.',
+    description: 'The disc golf scorecard app that handles the money. Download for Android or try the web app.',
     images: ['/og-image.png'],
-    creator: '@onchaindiscgolf', // TODO: Update with actual Twitter handle
+    creator: '@OnChainDiscGolf',
   },
   robots: {
     index: true,

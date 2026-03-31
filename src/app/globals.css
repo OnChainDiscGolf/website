@@ -6,6 +6,8 @@
   --color-brand-accent: #f59e0b;
   --color-brand-dark: #0f172a;
   --color-brand-surface: #1e293b;
+  --color-bitcoin-orange: #F7931A;
+  --color-nostr-purple: #8B5CF6;
 
   --font-sans: var(--font-inter);
   --font-heading: var(--font-outfit);

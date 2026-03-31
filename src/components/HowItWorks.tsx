@@ -1,87 +1,104 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Play, DollarSign, Smartphone } from "lucide-react";
+import { Download, QrCode, Trophy, WifiOff } from "lucide-react";
 
 const steps = [
-    {
-        icon: <Smartphone className="w-12 h-12 text-brand-primary" />,
-        number: "1",
-        title: "Get Started (30 seconds)",
-        description: "Scan the QR code or visit the link on your phone. Add to your home screen. The app creates your player identity automatically—no email, no signup form.",
-    },
-    {
-        icon: <Play className="w-12 h-12 text-brand-secondary" />,
-        number: "2",
-        title: "Join a Round",
-        description: "Start a new game or join friends. Each player adds a round entry (as little as $1 in Bitcoin). Play disc golf like you normally would—the app tracks your scores.",
-    },
-    {
-        icon: <DollarSign className="w-12 h-12 text-brand-accent" />,
-        number: "3",
-        title: "Win & Settle Up",
-        description: "Lowest score wins the prize pool. Settlement happens automatically and instantly when the round ends. Cash out anytime to regular dollars, or use it for your next round.",
-    },
+  {
+    icon: <Download size={28} />,
+    number: "1",
+    title: "Download the App",
+    description:
+      "Grab the Android APK or open the web app on iOS. No app store approval needed — no sign-up either.",
+    color: "text-brand-primary",
+    bg: "bg-brand-primary/10",
+  },
+  {
+    icon: <QrCode size={28} />,
+    number: "2",
+    title: "Start or Join a Round",
+    description:
+      "Create a round and share the QR code, or scan a friend's to join. Set an optional entry fee.",
+    color: "text-brand-secondary",
+    bg: "bg-brand-secondary/10",
+  },
+  {
+    icon: <Trophy size={28} />,
+    number: "3",
+    title: "Play and Get Paid",
+    description:
+      "Throw your disc, log your scores. When the round ends, the winner's prize hits their wallet automatically.",
+    color: "text-brand-accent",
+    bg: "bg-brand-accent/10",
+  },
 ];
 
 export default function HowItWorks() {
-    return (
-        <section id="how-it-works" className="py-24 bg-brand-dark relative">
-            <div className="container mx-auto px-4">
-                <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-5xl font-heading font-bold mb-6">
-                        How It Works
-                    </h2>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                        From zero to playing in under a minute. Here's the complete process.
-                    </p>
+  return (
+    <section id="how-it-works" className="py-20 sm:py-28 relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-14"
+        >
+          <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-4">
+            Up and Running in 60 Seconds
+          </h2>
+          <p className="text-white/50 max-w-md mx-auto">
+            Three steps. No sign-up required.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {steps.map((step, i) => (
+            <motion.div
+              key={step.number}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.15 }}
+              className="relative"
+            >
+              {/* Connector (desktop) */}
+              {i < steps.length - 1 && (
+                <div className="hidden md:block absolute top-10 left-full w-full h-px bg-gradient-to-r from-white/10 to-transparent -z-10" />
+              )}
+
+              <div className="bg-brand-surface/40 border border-white/10 rounded-2xl p-6 h-full hover:border-white/20 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className={`flex-shrink-0 w-10 h-10 rounded-full ${step.bg} ${step.color} flex items-center justify-center text-lg font-bold font-heading`}
+                  >
+                    {step.number}
+                  </div>
+                  <div className={step.color}>{step.icon}</div>
                 </div>
+                <h3 className="text-lg font-heading font-semibold mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-white/50 text-sm leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
+            </motion.div>
+          ))}
+        </div>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                    {steps.map((step, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: index * 0.2 }}
-                            viewport={{ once: true }}
-                            className="relative"
-                        >
-                            {/* Connector Line (desktop only) */}
-                            {index < steps.length - 1 && (
-                                <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-brand-primary/50 to-transparent -z-10" />
-                            )}
-
-                            <div className="bg-brand-surface/50 border border-white/10 rounded-2xl p-8 h-full hover:border-brand-primary/50 transition-colors">
-                                {/* Step Number Badge */}
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-brand-primary/20 text-brand-primary flex items-center justify-center text-2xl font-bold">
-                                        {step.number}
-                                    </div>
-                                    <div className="flex-shrink-0">
-                                        {step.icon}
-                                    </div>
-                                </div>
-
-                                <h3 className="text-2xl font-heading font-bold mb-4">{step.title}</h3>
-                                <p className="text-gray-400 leading-relaxed">{step.description}</p>
-                            </div>
-                        </motion.div>
-                    ))}
-                </div>
-
-                {/* Bottom Callout */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="mt-12 max-w-3xl mx-auto bg-brand-secondary/10 border border-brand-secondary/30 rounded-2xl p-8 text-center"
-                >
-                    <p className="text-lg text-gray-300">
-                        <span className="text-brand-secondary font-bold">No middleman.</span> Round entries go into a prize pool that math controls, not a person. When the round ends, settlement happens automatically. No trust required.
-                    </p>
-                </motion.div>
-            </div>
-        </section>
-    );
+        {/* Offline callout */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="flex items-center justify-center gap-2 mt-10 text-white/30 text-sm"
+        >
+          <WifiOff size={14} />
+          <span>Works offline too. Scores sync when you&apos;re back in range.</span>
+        </motion.div>
+      </div>
+    </section>
+  );
 }
